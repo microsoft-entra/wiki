@@ -167,4 +167,4 @@ _Licensing_: [P1 or P2](https://docs.microsoft.com/azure/active-directory/fundam
 
 ## Next topic
 
-[Application management](./apps.md)
+[Application management](./manage-apps.md)

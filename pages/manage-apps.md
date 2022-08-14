@@ -224,3 +224,27 @@ Many organizations have Software as a Service (SaaS) or custom line-of-business 
 ### 7.1 Discover and manage shadow IT in your network
 
 To get the full benefit of cloud apps and services, an IT team must find the right balance of supporting access while maintaining control to protect critical data. Learn how to [Discover the apps used by your organization](https://docs.microsoft.com/azure/active-directory/manage-apps/cloud-app-security)
+
+## 8. For developers
+
+### 8.1 App roles
+
+Role-based access control (RBAC) is a popular mechanism to enforce authorization in applications. RBAC allows administrators to grant permissions to roles rather than to specific users or groups. The administrator can then assign roles to different users and groups to control who has access to what content and functionality.
+
+An admin [defines app roles](https://docs.microsoft.com/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps#declare-roles-for-an-application) with the [app registration settings](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app). Once the admin has added app roles in the application, they can [assign users and groups to the roles](https://docs.microsoft.com/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps#assign-users-and-groups-to-roles).
+
+After defining the app roles and assigning users or groups to them, access the role assignments in the tokens coming into the application and act on them accordingly. Learn how to [implement RBAC in ASP.NET Core, Angular and Node.js](https://docs.microsoft.com/azure/active-directory/develop/howto-implement-rbac-for-apps)
+
+#### 8.1.1 App roles vs. groups
+
+Though you can use app roles or groups for authorization, key differences between them can influence which you decide to use for your scenario. Learn about the different between [using app roles and security groups](https://docs.microsoft.com/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps#app-roles-vs-groups)
+
+#### 8.1.2 App roles vs. scopes
+
+The [scopes](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent) define the permission **for an app** that acts of behalf of the user, to access user's profiles and data (in some cases also organization's data). The user or an admin need to [consent](#5-consent) the permission request by the app.
+
+[Application roles](https://docs.microsoft.com/azure/architecture/multitenant-identity/app-roles) are used to assign permissions **to users**. For example users with _Administrator_ role can perform all CRUD operations. Users with _Edit_ role, can create and view items in the app. Users with _Read_ role, can only read items in the app.
+
+Using the app roles, the app admin defines the application roles by adding them to the application manifest. Then [assign users or group](https://docs.microsoft.com/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps#assign-users-and-groups-to-roles) permission to app roles. When a user signs in, the user's assigned roles are sent as claims in the token. 
+
+The developer of the application is responsible to check the roles claim that Azure AD returns the app, and enable or disable some of the app functionality accordingly.
