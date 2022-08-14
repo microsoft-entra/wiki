@@ -12,9 +12,9 @@ The following tutorials list the key features and the required licensing:
 > **Important**: the list is not completed and at this version focus mainly on the P2 license
 
 - [Fundamentals](./pages/fundamentals.md)
-- [Conditional access](./pages/conditional-access.md)
 - [Manage apps](./pages/manage-apps.md)
 - [App provisioning](./pages/app-provisioning.md)
+- [Conditional access](./pages/conditional-access.md)
 - [Identity Governance](./pages/governance.md)
 - [Privilege identity management](./pages/pim.md)
 - [Reports and monitoring](./pages/reports-monitoring.md)
