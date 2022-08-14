@@ -13,11 +13,12 @@ The following tutorials list the key features and the required licensing:
 
 - [Fundamentals](./pages/fundamentals.md)
 - [Conditional access](./pages/conditional-access.md)
+- [Manage apps](./pages/manage-apps.md)
+- [App provisioning](./pages/app-provisioning.md)
 - [Identity Governance](./pages/governance.md)
 - [Privilege identity management](./pages/pim.md)
 - [Reports and monitoring](./pages/reports-monitoring.md)
-- [Manage apps](./pages/manage-apps.md)
-- [App provisioning](./pages/app-provisioning.md)
+
 
 ## Choose the best version for your business
 
