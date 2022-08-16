@@ -18,6 +18,7 @@ The following tutorials list the key features and the required licensing:
 - [Identity Governance](./pages/governance.md)
 - [Privilege identity management](./pages/pim.md)
 - [Reports and monitoring](./pages/reports-monitoring.md)
+- [Azure AD Connect cloud sync (Cloud sync)](./pages/cloud-sync.md)
 
 
 ## Choose the best version for your business
