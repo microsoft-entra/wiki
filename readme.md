@@ -13,6 +13,7 @@ The following tutorials list the key features and the required licensing:
 
 - [Fundamentals](./pages/fundamentals.md)
 - [Manage apps](./pages/manage-apps.md)
+- [External identities](./pages/external-identities.md)
 - [App provisioning](./pages/app-provisioning.md)
 - [Conditional access](./pages/conditional-access.md)
 - [Identity Governance](./pages/governance.md)
