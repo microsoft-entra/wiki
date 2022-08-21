@@ -10,9 +10,9 @@ Azure AD B2B collaboration lets you invite guest users to collaborate with your 
 
 | Type (3) | Identity | Admin experience| User experience| Scope  |
 |---------|---------|---------|---------|---------|
-| B2B collaboration | [Azure AD](https://docs.microsoft.com/azure/active-directory/external-identities/azure-ad-account) | Invite users (1)| Authenticate with their home organization. | Any Azure AD tenant. Tenant admin can allow, or disallow domains.  Admin can also [restrict access](https://docs.microsoft.com/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-collaboration) to users and groups and select which applications to share.|
-| B2B collaboration| Identity providers| Invite users  (1)| Authenticate with their identity provider.| [Microsoft account](https://docs.microsoft.com/azure/active-directory/external-identities/microsoft-account), [Google](https://docs.microsoft.com/azure/active-directory/external-identities/google-federation), [Facebook](https://docs.microsoft.com/azure/active-directory/external-identities/facebook-federation), and [SAML/WS-Fed identity providers](https://docs.microsoft.com/azure/active-directory/external-identities/direct-federation) |
-| B2B collaboration| [Email one-time passcode](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode) (2)| Invite users (1)| Email one-time passcode | Any email address|
+| B2B collaboration | [Azure AD](https://docs.microsoft.com/azure/active-directory/external-identities/azure-ad-account) | Invite users (1), and [self-sign up](https://docs.microsoft.com/azure/active-directory/external-identities/self-service-sign-up-overview) | Authenticate with their home organization. | Any Azure AD tenant. Tenant admin can allow, or disallow domains.  Admin can also [restrict access](https://docs.microsoft.com/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-collaboration) to users and groups and select which applications to share.|
+| B2B collaboration| Identity providers| Invite users (1), and [self-sign up](https://docs.microsoft.com/azure/active-directory/external-identities/self-service-sign-up-overview)| Authenticate with their identity provider.| [Microsoft account](https://docs.microsoft.com/azure/active-directory/external-identities/microsoft-account), [Google](https://docs.microsoft.com/azure/active-directory/external-identities/google-federation), [Facebook](https://docs.microsoft.com/azure/active-directory/external-identities/facebook-federation), and [SAML/WS-Fed identity providers](https://docs.microsoft.com/azure/active-directory/external-identities/direct-federation) |
+| B2B collaboration| [Email one-time passcode](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode) (2)| Invite users (1), and [self-sign up](https://docs.microsoft.com/azure/active-directory/external-identities/self-service-sign-up-overview)| Email one-time passcode | Any email address|
 | [B2B direct connect](https://docs.microsoft.com/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-direct-connect)| Azure AD| Mutual trust | Authenticate with their home organization.| Tenants that are configured with mutual trust. Admin can also [restrict access](https://docs.microsoft.com/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-collaboration) to users and groups and select which applications to share. |
 | [Microsoft Azure global cloud and Microsoft Azure Government](https://docs.microsoft.com/azure/active-directory/external-identities/cross-cloud-settings)| Azure AD | Mutual trust| Authenticate with their home organization.| Microsoft Azure global cloud and Microsoft Azure Government and China 21Vianet.| 
 | [Internal guests](https://docs.microsoft.com/azure/active-directory/external-identities/user-properties) (4) | Azure AD |Setting up internal credentials for them and designating them as guests by setting the user object UserType to Guest. | Credentials manage by your tenant, such as username and password. | Users are manged by your tenant.|
@@ -24,7 +24,15 @@ Notes:
 1. B2B collaboration users are represented in your directory, typically as guest users. B2B direct connect users are NOT represented in your directory, but they're visible from within the Teams shared channel and can be monitored in Teams admin center reports.
 1. If you have internal guest users like these, you can [invite them to use B2B collaboration](https://docs.microsoft.com/azure/active-directory/external-identities/invite-internal-users) instead. These B2B guest users will be able to use their own identities and credentials to sign in, and you won’t need to maintain passwords or manage account lifecycles.
 
-## 2. B2B direct connect
+## 2. External identities
+
+This section describes the type of external identities admins can configure in their tenant.
+
+### 2.1 Identity providers
+
+An identity provider creates, maintains, and manages identity information while providing authentication services to applications. When sharing your apps and resources with external users, Azure AD is the default identity provider for sharing. This means when you invite external users who already have an Azure AD or Microsoft account, they can automatically sign in without further configuration on your part. External Identities offers a [variety of identity providers](https://docs.microsoft.com/azure/active-directory/external-identities/identity-providers) users can sign-in, such as Google, Facebook and SAML identity providers.
+
+### 2.2 B2B direct connect
 
 With [Azure AD B2B direct connect](https://docs.microsoft.com/azure/active-directory/external-identities/b2b-direct-connect-overview) you can establish a mutual, two-way trust with another Azure AD organization for seamless collaboration. It allows users to seamlessly sign in to your shared resources and vice versa. B2B direct connect users are NOT added as guests to your Azure AD directory.
 
@@ -33,9 +41,17 @@ With [Azure AD B2B direct connect](https://docs.microsoft.com/azure/active-direc
 
 B2B direct connect is [established through mutual trust](https://docs.microsoft.com/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-direct-connect). Both you and the other organization need to enable B2B direct connect with each other in your cross-tenant access settings.
 
-### 2.1 Microsoft cloud settings for B2B collaboration
+### 2.3 Microsoft cloud settings for B2B collaboration
 
 You can establish mutual B2B collaboration between the [Microsoft Azure clouds](https://docs.microsoft.com/azure/active-directory/external-identities/cross-cloud-settings) for USA and China clouds.
+
+### 2.4. Email one-time passcode
+
+The [email one-time passcode feature](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode) is a way to authenticate B2B collaboration users when they can't be authenticated through other means, such as Azure AD, Microsoft account (MSA), or social identity providers. When a B2B guest user tries to redeem your invitation or sign in to your shared resources, they can request a temporary passcode, which is sent to their email address. Then they enter this passcode to continue signing in.
+
+### 2.5 Local guest
+
+Before Azure AD B2B collaboration was available, it was common to collaborate with distributors, suppliers, vendors, and others by setting up internal credentials for them and designating them as guests by setting the user object UserType to Guest. If you have internal guest users like these, you can [invite them](https://docs.microsoft.com/azure/active-directory/external-identities/invite-internal-users) to use B2B collaboration instead so they can use their own credentials, allowing their external identity provider to manage authentication and their account lifecycle.
 
 ## 3. Create a B2B account
 
@@ -45,25 +61,33 @@ There are various ways to add external users to your organization for B2B collab
 
 Invite users to B2B collaboration using their Azure AD accounts, Microsoft accounts, or social identities that you enable, such as Google. An admin can use the Azure portal or PowerShell to invite users to B2B collaboration. The user signs into the shared resources using a simple redemption process with their work, school, or other email account.
 
-#### 3.1.1 Add users without an invitation link or email
+### 3.2 Add users without an invitation link or email
 
 You can now invite guest users by [sending out a direct link](https://docs.microsoft.com/azure/active-directory/external-identities/add-user-without-invite) to a shared app. With this method, guest users no longer need to use the invitation email, except in some special cases. A guest user select the app link, reviews and accepts the privacy terms, and then seamlessly accesses the app.
-
-### 3.2 Local guest
-
-Before Azure AD B2B collaboration was available, it was common to collaborate with distributors, suppliers, vendors, and others by setting up internal credentials for them and designating them as guests by setting the user object UserType to Guest. If you have internal guest users like these, you can [invite them](https://docs.microsoft.com/azure/active-directory/external-identities/invite-internal-users) to use B2B collaboration instead so they can use their own credentials, allowing their external identity provider to manage authentication and their account lifecycle.
 
 ### 3.3 Self-service sign-up 
 
 Lets external users [sign up](https://docs.microsoft.com/azure/active-directory/external-identities/self-service-sign-up-overview) for applications themselves. The experience can be customized to allow sign-up with a work, school, or social identity (like Google or Facebook). You can also collect information about the user during the sign-up process.
 
-#### 3.3.1 Use API connectors
+#### 3.3.1 Custom attributes
+
+For each application, you might have different requirements for the information you want to collect during sign-up. Azure AD comes with a built-in set of information stored in attributes, such as Given Name, Surname, City, and Postal Code. With Azure AD, you can [extend the set of attributes](https://docs.microsoft.com/azure/active-directory/external-identities/user-flow-add-custom-attributes) stored on a guest account when the external user signs up through a user flow.
+
+#### 3.3.2 Language customization
+
+Language customization allows to [customize languages](https://docs.microsoft.com/azure/active-directory/external-identities/user-flow-customize-language) to modify the strings displayed to users as part of the attribute collection process during sign up. Microsoft provides the translations for 36 languages. Even if your experience is provided for only a single language, you can customize the attribute names on the attribute collection page.
+
+#### 3.3.3 Use API connectors
 
 You can use [API connectors](https://docs.microsoft.com/azure/active-directory/external-identities/api-connectors-overview) to integrate your self-service sign-up user flows with web APIs to customize the sign-up experience and integrate with external systems. For example, with API connectors, you can: perform identity verification, validate user input data, or Run custom business logic.
 
 ### 3.4 Entitlement management
 
 Use [Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/external-identities/self-service-portal), an identity governance feature that lets you manage identity and access for external users at scale by automating access request workflows, access assignments, reviews, and expiration.
+
+### 3.5 Local guest
+
+Setting up internal credentials for them and designating them as guests by setting the user object UserType to Guest. lifecycle.
 
 ## 4. External collaboration settings
 
@@ -99,7 +123,7 @@ You can configure [organizational-specific settings](https://docs.microsoft.com/
 
 ![Screenshot that shows the inbound cross-tenant access settings](./media/cross-tenant-access-settings.png)
 
-## 5. Grant B2B users in Azure AD access to your on-premises applications
+## 5. Grant B2B users to on-premises applications
 
 You can [provide B2B users access to on-premises apps](https://docs.microsoft.com/azure/active-directory/external-identities/hybrid-cloud-to-on-premises). These on-premises apps can use SAML-based authentication or integrated Windows authentication (IWA) with Kerberos constrained delegation (KCD)
 
@@ -107,6 +131,6 @@ You can [provide B2B users access to on-premises apps](https://docs.microsoft.co
 
 With guest users, you have auditing capabilities similar to with member users. You can use the [Audit logs](https://docs.microsoft.com/azure/active-directory/external-identities/auditing-and-reporting#audit-logs) and [access reviews](https://docs.microsoft.com/azure/active-directory/external-identities/auditing-and-reporting) to periodically verify whether guest users still need access to your resources.
 
-## 67. Billing model for Azure AD External Identities
+## 7. Billing model for Azure AD External Identities
 
 Azure Active Directory (Azure AD) External Identities pricing is based on [monthly active users (MAU)](https://docs.microsoft.com/azure/active-directory/external-identities/external-identities-pricing), which is the count of unique users with authentication activity within a calendar month.
