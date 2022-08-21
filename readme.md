@@ -20,7 +20,7 @@ The following tutorials list the key features and the required licensing:
 - [Privilege identity management](./pages/pim.md)
 - [Reports and monitoring](./pages/reports-monitoring.md)
 - [Azure AD Connect cloud sync (Cloud sync)](./pages/cloud-sync.md)
-- [Permissions management](./pages/permissions-management.md)(Cloudknox)
+- [Permissions management](./pages/permissions-management.md) (Cloudknox)
 - [Enterprise user management](./pages/enterprise-users.md) (links only)
 
 
