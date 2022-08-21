@@ -12,6 +12,7 @@ The following tutorials list the key features and the required licensing:
 > **Important**: the list is not completed and at this version focus mainly on the P2 license
 
 - [Fundamentals](./pages/fundamentals.md)
+- [Enterprise user management](./pages/enterprise-users.md)
 - [Manage apps](./pages/manage-apps.md)
 - [External identities](./pages/external-identities.md)
 - [App provisioning](./pages/app-provisioning.md)
