@@ -12,7 +12,6 @@ The following tutorials list the key features and the required licensing:
 > **Important**: the list is not completed and at this version focus mainly on the P2 license
 
 - [Fundamentals](./pages/fundamentals.md)
-- [Enterprise user management](./pages/enterprise-users.md) (links only)
 - [Manage apps](./pages/manage-apps.md)
 - [External identities](./pages/external-identities.md)
 - [App provisioning](./pages/app-provisioning.md)
@@ -21,6 +20,7 @@ The following tutorials list the key features and the required licensing:
 - [Privilege identity management](./pages/pim.md)
 - [Reports and monitoring](./pages/reports-monitoring.md)
 - [Azure AD Connect cloud sync (Cloud sync)](./pages/cloud-sync.md)
+- [Enterprise user management](./pages/enterprise-users.md) (links only)
 
 
 ## Choose the best version for your business
