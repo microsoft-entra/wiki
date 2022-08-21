@@ -87,7 +87,7 @@ Use [Azure AD entitlement management](https://docs.microsoft.com/azure/active-di
 
 ### 3.5 Local guest
 
-Setting up internal credentials for them and designating them as guests by setting the user object UserType to Guest. lifecycle.
+Setting up internal credentials for them and designating them as guests by setting the user object UserType to Guest. 
 
 ## 4. External collaboration settings
 
