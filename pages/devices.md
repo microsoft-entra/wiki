@@ -114,11 +114,10 @@ If you have an on-premises Active Directory environment and you want to join you
 
 ### 3.1 Windows current devices
 
-- Register as a machine context
 
 ### 3.2 Windows down-level devices
 
-- Register as a user context
+To register Windows down-level devices, organizations must install [Microsoft Workplace Join for non-Windows 10 computers](https://www.microsoft.com/download/details.aspx?id=53554) available on the Microsoft Download Center. The installer creates a scheduled task on the system that runs in the user context. The task is triggered when the user signs in to Windows. The task silently joins the device with Azure AD with the user credentials after authenticating with Azure AD.
 
 ### 3.3 Staged Rollout
 
