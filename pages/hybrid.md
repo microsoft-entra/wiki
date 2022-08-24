@@ -88,7 +88,7 @@ Choosing the correct authentication method is a crucial first decision in settin
 
 With Single Sign-On users don't need to type in their passwords to sign in **to Azure AD**, and usually, even type in their usernames. It provides your users easy access to your **cloud-based applications** without needing any additional on-premises components.
 
-For Windows 10, Windows Server 2016 and later versions, **it’s recommended** to use SSO via [primary refresh token (PRT)](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token). For Windows 7 and Windows 8.1, it’s recommended to use Seamless SSO (needs the device to be domain-joined). Read more about [SSO via primary refresh token vs. Seamless SSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+For Windows 10, Windows Server 2016 and later versions, **it’s recommended** to use SSO via [primary refresh token (PRT)](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token). For Windows 7 and Windows 8.1, it’s recommended to use [Seamless SSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) (needs the device to be domain-joined). Read more about [SSO via primary refresh token vs. Seamless SSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
 
 ### 6.1 Seamless SSO solution
 
@@ -114,7 +114,11 @@ SSO via primary refresh token works once devices are registered with Azure AD. T
 
 For more information on how SSO works with PRT, check out the [What is a Primary Refresh Token](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token) article.
 
-## 7. Health Monitoring
+## 7. Staged Rollout
+
+If you have an Azure AD tenant with [federated domains](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed) (for example, using AD-FS), [Staged Rollout](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout) allows you to selectively test groups of users with cloud authentication such as, [Password hash synchronization (PHS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-phs), and [Pass-through authentication (PTA)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) before cutting over your entire domains.
+
+## 8. Health Monitoring
 
 _Licensing_: P1
 
