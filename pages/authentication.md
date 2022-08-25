@@ -34,6 +34,10 @@ The Azure AD Identity Protection team constantly analyzes Azure AD security tele
 - This global banned password list is applied to users when they change or reset their own password through Azure AD.
 - Admin can add their own entries to the [custom banned password list](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad#custom-banned-password-list)
 
+### 1.3.1 Password Protection for Active Directory (on premise)
+
+[Azure AD Password Protection](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad-on-premises) detects and blocks known weak passwords and their variants, and can also block additional weak terms that are specific to your organization. On-premises deployment of Azure AD Password Protection uses the same global and custom banned password lists that are stored in Azure AD, and does the same checks for on-premises password changes as Azure AD does for cloud-based changes. These checks are performed during password changes and password reset events against on-premises Active Directory Domain Services (AD DS) domain controllers.
+
 ## 2. Blocking legacy authentication
 
 Legacy authentication is a term that refers to an authentication request made by:
