@@ -24,7 +24,7 @@ The following tutorials list the key features and the required licensing:
 - [Device identity](./pages/devices.md)
 - [Permissions management](./pages/permissions-management.md) (Cloudknox)
 - [Enterprise user management](./pages/enterprise-users.md) (links only)
-
+- [Authentication](./pages/authentication.md) (draft)
 
 ## Choose the best version for your business
 
