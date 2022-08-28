@@ -47,3 +47,35 @@ Legacy authentication is a term that refers to an authentication request made by
 
 Legacy authentication does not support multi-factor authentication (MFA). Even if you have an MFA policy enabled on your directory, a bad actor can authenticate using a legacy protocol and bypass MFA. The best way to protect your account from malicious authentication requests made by legacy protocols is to [block these attempts altogether](https://docs.microsoft.com/azure/active-directory/fundamentals/concept-fundamentals-block-legacy-authentication).
 
+
+## 3. Temporary Access Pass (TAP)
+
+A [Temporary Access Pass (TAP)](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-temporary-access-pass) is a time-limited passcode issued by an admin that satisfies strong authentication requirements and can be used to onboard other authentication methods, including Passwordless ones such as Microsoft Authenticator or even Windows Hello. A TAP also makes recovery easier when a user has lost or forgotten their strong authentication factor like a FIDO2 security key or Microsoft Authenticator app, but needs to sign in to register new strong authentication methods.
+
+### 3.1 Admin experience
+
+Before anyone can sign-in with a TAP, admin needs to [enable](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-temporary-access-pass#enable-the-temporary-access-pass-policy) TAP in the authentication method policy and choose which users and groups can sign in by using a TAP and lifetime of passes created in the tenant.
+
+After admin enables a policy, they can [create a TAP](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-temporary-access-pass#create-a-temporary-access-pass) for a user in Azure AD. From the user profile page, select **Add authentication methods**, and choose **Temporary Access Pass**. 
+
+The following screenshot shows how to create a TAP:
+
+![](./media/authentication/temporary-access-pass-1.png)
+
+Once added, the details of the TAP are shown. Make a note of the actual TAP value. You provide this value to the user. You can't view this value after you select Ok. The following screenshot shows a TAP create by administrator:
+
+![](./media/authentication/temporary-access-pass-2.png)
+
+### 3.2 User experience
+
+The most common use for a TAP is for a user to register authentication details during the first sign-in or device setup, without the need to complete extra security prompts. Authentication methods are registered at <https://aka.ms/mysecurityinfo>. Users can also update existing authentication methods here.
+
+Note, you can also test the TAP by navigating to the <https://myapps.microsoft.com> portal, or any other application.
+
+User enters the UPN of the account you created the TAP for, such as emily@contoso.com.
+
+![](./media/authentication/temporary-access-pass-3.png)
+
+If the user is included in the TAP policy, they'll see a screen to enter their TAP. The user needs to enter the TAP that was displayed in the Azure portal.
+
+![](./media/authentication/temporary-access-pass-4.png)
