@@ -1,11 +1,14 @@
 # Microsoft Entra technical overview
 
+## Acronyms, Abbreviations and terms
+
+This [Glossary](./pages/glossary.md) demystifies some of the terms and acronyms we use every day in working with the Azure platform. For Office 365, check out the [Microsoft 365 Glossary](https://docs.microsoft.com/microsoft-365/community/glossary).
+
 ## Azure Active Directory
 
 Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. 
 
 Azure Active Directory also helps them access internal resources like apps on your corporate intranet network, along with any cloud apps developed for your own organization. For more information about creating a tenant for your organization, check out the [Create a new tenant in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) quickstart. Key features:
-
 
 - [Fundamentals](./pages/fundamentals.md)
 - [Manage apps](./pages/manage-apps.md)
@@ -41,12 +44,4 @@ You can purchase and associate [Azure AD Premium](https://docs.microsoft.com/azu
 
 ## Microsoft 365 Defender
 
-[Microsoft 365 Defender](https://docs.microsoft.com/microsoft-365/security/defender/microsoft-365-defender) is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
-
-Microsoft 365 Defender services (external links):
-
-- [Microsoft Defender for Cloud Apps](https://docs.microsoft.com/defender-cloud-apps/)
-- [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender Vulnerability Management](https://docs.microsoft.com/microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/overview)
-- [Microsoft Defender for Identity](https://docs.microsoft.com/defender-for-identity/)
+[Microsoft 365 Defender](pages/defender.md) is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.

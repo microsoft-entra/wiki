@@ -1,0 +1,4 @@
+# Microsoft Defender for Endpoint
+
+[Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint) is a cloud-powered endpoint security solution that helps to secure against ransomware, file-less malware, and other sophisticated attacks on [Windows](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions), [macOS](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac), [Linux](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux), [Android](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-android), and [iOS](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-ios). The comprehensive solution helps to rapidly stop attacks, scale your security resources, and evolve your defenses.
+
