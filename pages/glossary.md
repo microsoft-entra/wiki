@@ -8,6 +8,8 @@
 - **AD FS** (ADFS, AD-FS)- Active Directory Federated Services. Provides secured identity federation and Web single sign-on (SSO) capabilities for end users in Windows Server 2012 R2 and later. Learn more:
   - [AD FS Overview](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview)
 
+- **CAE** - [Continuous access evaluation](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-continuous-access-evaluation)
+
 - **CASB** - Cloud Access Security Broker. CASBs act a gatekeeper to broker access in real time between enterprise users and cloud resources they use, wherever the users are located and regardless of the device they are using. Read more:
   - [Microsoft Defender for Cloud Apps overview](https://docs.microsoft.com/defender-cloud-apps/what-is-defender-for-cloud-apps#what-is-a-casb)
 
