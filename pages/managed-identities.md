@@ -44,3 +44,11 @@ Services:
 ## View update and sign-in activities
 
 As an administrator your can [View updates made to user-assigned managed identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/how-to-view-managed-identity-activity), [View role assignments added and removed for managed identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/how-to-view-managed-identity-activity#view-role-assignments-added-and-removed-for-managed-identities), or [View authentication attempts by managed identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/how-to-view-managed-identity-activity#view-authentication-attempts-by-managed-identities)
+
+## View resources for a user-assigned managed identity
+
+You quickly see which [Azure resources are associated with a user-assigned managed identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/how-to-view-associated-resources-for-an-identity) gives you greater visibility into your environment. 
+
+<img src="./media/managed-identities/associated-resources-list.png" width="600">
+
+You can identify unused identities that can be safely deleted, and know which resources will be affected by changing the permissions or group membership of a managed identity.
