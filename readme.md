@@ -23,7 +23,8 @@ Azure Active Directory also helps them access internal resources like apps on yo
 - [Device identity](./pages/devices.md)
 - [Permissions management](./pages/permissions-management.md) (Cloudknox)
 - [Enterprise user management](./pages/enterprise-users.md) (links only)
-- [Authentication](./pages/authentication.md) (draft)
+- [Authentication](./pages/authentication.md)
+- [Managed identities](./pages/managed-identities.md)
 
 ### Choose the best version for your business
 
