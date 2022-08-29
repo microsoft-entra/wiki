@@ -42,7 +42,16 @@
 - [Validate a dynamic group membership rule](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-dynamic-rule-validation)
 - [Create simpler, more efficient rules for dynamic groups](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-dynamic-rule-more-efficient)
 - [Change static group membership to dynamic](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-change-type)
-- [Group membership in a dynamic group](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-dynamic-rule-member-of). Enables admins to create dynamic groups that populate by adding members of other groups using the memberOf attribute.
+
+### 3.1 Group membership in a dynamic group
+
+[Group membership in a dynamic group](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-dynamic-rule-member-of) enables admins to create dynamic groups that populate by adding members of other groups using the `user.memberOf` attribute.
+
+Apps that couldn't read group-based membership previously in Azure AD can now read the entire membership of these new memberOf groups. Not only can these groups be used for apps, they can also be used for licensing assignments. 
+
+The following screenshot shows how to configure a dynamic group based on `user.memberOf` attribute of two security groups:
+
+<img src="./media/enterprise-users/dynamic-groups-member-of.png" width="600">
 
 ## 4. Licenses
 
