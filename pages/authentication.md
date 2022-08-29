@@ -207,4 +207,6 @@ During the sign-in, if a user selects **Can't access your account?**, or navigat
 
 After providing the UPN, the users is asked random questions from the pool of the security questions:
 
-![](./media/authentication/security-questions-5.png)
+![foo [bar](./media/authentication/security-questions-5.png)](./media/authentication/security-questions-5.png)
+
+
