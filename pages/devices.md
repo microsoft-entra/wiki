@@ -45,19 +45,19 @@ For Windows 10 and later, to register a personal device on your work or school n
 
 The following screenshot shows how a user register Windows 11 device.
 
-![](./media/device-registration-windows-11-step-1.png)
+<img src="./media/devices/device-registration-windows-11-step-1.png" width="400"> 
 
 The following screenshot shows how connect with an Azure AD account.
 
-![](./media/device-registration-windows-11-step-2.png)
+<img src="./media/devices/device-registration-windows-11-step-2.png" width="400"> 
 
 The following screenshot shows how Emily sings-in to the kingdir.biz Azure AD account.
 
-![](./media/device-registration-windows-11-step-3.png)
+<img src="./media/devices/device-registration-windows-11-step-3.png" width="400"> 
 
 The following screenshot shows the device object of Emily's Windows 11:
 
-![](./media/device-registration-windows-11-device-object.png)
+<img src="./media/devices/device-registration-windows-11-device-object.png" width="600"> 
 
 TIP: you can run the `dsredcmd /status` command on your windows machine to get more information about the registered device.
 
@@ -77,31 +77,31 @@ Azure AD join enables you to transition towards a cloud-first model with Windows
 
 The following screenshot shows how a user joins a Windows 11 device.
 
-![](./media/device-join-windows-11-step-1.png)
+<img src="./media/devices/device-join-windows-11-step-1.png" width="400"> 
 
 The following screenshot shows how to connect with an Azure AD account.
 
-![](./media/device-join-windows-11-step-2.png)
+<img src="./media/devices/device-join-windows-11-step-2.png" width="400"> 
 
 The following screenshot shows how to **Join this device to Azure Active Directory**.
 
-![](./media/device-join-windows-11-step-3.png)
+<img src="./media/devices/device-join-windows-11-step-3.png" width="400"> 
 
 The following screenshot shows how Emily sings-in to the kingdir.biz Azure AD account.
 
-![](./media/device-join-windows-11-step-4.png)
+<img src="./media/devices/device-join-windows-11-step-4.png" width="400"> 
 
 The following screenshot shows how to confirm the administrator account.
 
-![](./media/device-join-windows-11-step-5.png)
+<img src="./media/devices/device-join-windows-11-step-5.png" width="400"> 
 
 After the device join process is completed, log-out and log-in again with the Azure AD account. For login to a remote desktop, follow the steps in the [Connect to remote Azure Active Directory-joined PC](https://docs.microsoft.com/windows/client-management/connect-to-remote-aadj-pc) article.
 
-![](./media/device-join-windows-11-step-6.png)
+<img src="./media/devices/device-join-windows-11-step-6.png" width="400"> 
 
 The following screenshot shows the device object of Emily's Windows 11:
 
-![](./media/device-join-windows-device-object.png)
+<img src="./media/devices/device-join-windows-device-object.png" width="600"> 
 
 TIP: you can run the `dsredcmd /status` command on your windows machine to get more information about the registered device.
 

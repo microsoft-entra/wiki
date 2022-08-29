@@ -21,7 +21,7 @@ Azure Active Directory also helps them access internal resources like apps on yo
 - [Reports and monitoring](./pages/reports-monitoring.md)
 - [Azure AD Connect cloud sync (Cloud sync)](./pages/cloud-sync.md)
 - [Azure AD Connect](./pages/hybrid.md)
-- [Device identity](./pages/devices.md)
+- [Devices](./pages/devices.md)
 - [Permissions management](./pages/permissions-management.md) (Cloudknox)
 - [Authentication](./pages/authentication.md)
 - [Managed identities](./pages/managed-identities.md)
