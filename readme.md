@@ -12,6 +12,7 @@ Azure Active Directory also helps them access internal resources like apps on yo
 
 - [Fundamentals](./pages/fundamentals.md)
 - [Manage apps](./pages/manage-apps.md)
+- [Enterprise user management](./pages/enterprise-users.md)
 - [External identities](./pages/external-identities.md)
 - [App provisioning](./pages/app-provisioning.md)
 - [Conditional access](./pages/conditional-access.md)
@@ -22,7 +23,6 @@ Azure Active Directory also helps them access internal resources like apps on yo
 - [Azure AD Connect](./pages/hybrid.md)
 - [Device identity](./pages/devices.md)
 - [Permissions management](./pages/permissions-management.md) (Cloudknox)
-- [Enterprise user management](./pages/enterprise-users.md) (links only)
 - [Authentication](./pages/authentication.md)
 - [Managed identities](./pages/managed-identities.md)
 
