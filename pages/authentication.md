@@ -47,7 +47,7 @@ Legacy authentication is a term that refers to an authentication request made by
 
 Legacy authentication does not support multi-factor authentication (MFA). Even if you have an MFA policy enabled on your directory, a bad actor can authenticate using a legacy protocol and bypass MFA. The best way to protect your account from malicious authentication requests made by legacy protocols is to [block these attempts altogether](https://docs.microsoft.com/azure/active-directory/fundamentals/concept-fundamentals-block-legacy-authentication).
 
-## 3. Authentication and MFA methods
+## 3. Authentication, MFA methods and SSPR
 
 Some [authentication methods](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-methods) can be used as the primary factor when you sign in to an application or device, such as using a FIDO2 security key or a password. Other authentication methods are only available as a secondary factor when you use Azure AD Multi-Factor Authentication or SSPR.
 
@@ -63,6 +63,7 @@ The following table outlines when an authentication method can be used during a 
 | SMS                            | Yes                    | MFA and SSPR              |
 | Voice call                     | No                     | MFA and SSPR              |
 | Password                       | Yes                    |                           |
+| Security questions             | No                     | SSPR                      |
 
 ### 3.1 Password authentication
 
@@ -127,7 +128,13 @@ Azure AD certificate-based authentication (CBA) is supported for certificates on
 
 ### 3.3 Temporary Access Pass authentication
 
-A [Temporary Access Pass (TAP)](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-temporary-access-pass) is a time-limited passcode issued by an admin that satisfies strong authentication requirements and can be used to onboard other authentication methods, including Passwordless ones such as Microsoft Authenticator or even Windows Hello. A TAP also makes recovery easier when a user has lost or forgotten their strong authentication factor like a FIDO2 security key or Microsoft Authenticator app, but needs to sign in to register new strong authentication methods.
+A [Temporary Access Pass (TAP)](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-temporary-access-pass) is a time-limited passcode issued by an admin that satisfies strong authentication requirements and can be used to:
+
+- Onboard other authentication methods, including Passwordless ones such as Microsoft Authenticator or even Windows Hello.
+- Recovery when a user has lost or forgotten their strong authentication factor like a FIDO2 security key or Microsoft Authenticator app, but needs to sign in to register new strong authentication methods.
+- Alternative MFA method when an MFA device is not available. For example, a user forgot to bring their phone to the office, and need access to organization resource. 
+
+In all of the scenarios above, an admin can issue a time-limited passcode allowing the user to security sign-in with the passwoce as a first or second factor authentication. 
 
 #### 3.3.1 Admin experience
 
@@ -170,5 +177,34 @@ OATH TOTP can be implemented using either software or hardware to generate the c
   - **Onboarding process**: Once tokens are acquired they must be uploaded in a comma-separated values (CSV) file format including the UPN, serial number, secret key, time interval, manufacturer, and model
 
 
+### 3.5 Security questions
 
+Security questions aren't used as an authentication method during a sign-in event. Instead, [security questions](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-security-questions) can be used during the self-service password reset (SSPR) process to confirm who you are. Administrator accounts can't use security questions as verification method with SSPR.
 
+When users register for SSPR, they're prompted to choose the authentication methods to use. If they choose to use security questions, they pick from a set of questions to prompt for and then provide their own answers.
+
+#### 3.5.1 Admin experience
+
+The admin configure the Security questions in Azure Portal => **Azure Active Directory** => **Password reset** => **Authentication methods**. It's not under the **Security** option like the other methods.
+
+#### 3.5.2 User experience
+
+To use security questions authentication, users can register at the security info registration <https://aka.ms/setupsecurityinfo>. The following screenshot shows how a user can add a security  authentication method.
+
+![](./media/authentication/security-questions-1.png)
+
+Then select the **security questions** authentication option.
+
+![](./media/authentication/security-questions-2.png)
+
+The user is asked to pick from a set of questions to prompt for and provide their own answers.
+
+![](./media/authentication/security-questions-3.png)
+
+During the sign-in, if a user selects **Can't access your account?**, or navigate to <https://aka.ms/sspr>. Then provide their UPN.
+
+![](./media/authentication/security-questions-4.png)
+
+After providing the UPN, the users is asked random questions from the pool of the security questions:
+
+![](./media/authentication/security-questions-5.png)
