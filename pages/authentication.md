@@ -211,8 +211,30 @@ After providing the UPN, the users is asked random questions from the pool of th
 
 <img src="./media/authentication/security-questions-5.png" width="400">
 
+### 3.6 Microsoft Authenticator
+
+The [Microsoft Authenticator App](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-passwordless-phone) can be used to sign in to any Azure AD account without using a password on any platform or browser by getting a notification to their phone.
+
+#### 3.6.2 User experience 
+
+On the sign-in screen, user enters their username. A notification is sent to the Authenticator App via push notification system. Users view the notification, and if it's legitimate, select **Verify** to completed the sign-in. Otherwise, they can select **Deny**.
+
+<img src="./media/authentication/number-matching-disabled.png" width="300">
+
+##### 3.6.2.1 Number matching
+
+When a user responds to an [MFA](https://docs.microsoft.com/azure/active-directory/authentication/how-to-mfa-number-match#multifactor-authentication), or [SSPR](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment) push notification using the Authenticator app, they'll be presented with [a number](https://docs.microsoft.com/azure/active-directory/authentication/how-to-mfa-number-match). They need to type that number into the app to complete the approval. 
+
+The following screenshot shows the Number matching on both the sign-in page and the authenticator app.
+
+<img src="./media/authentication/number-matching-enabled.png" width="600">
 
 
+#### 3.6.2.2 Geographic location and app name
 
+When a user receives a Passwordless phone sign-in or MFA push notification in the Authenticator app, they'll see the [name of the application](https://docs.microsoft.com/azure/active-directory/authentication/how-to-mfa-additional-context#enable-additional-context-in-the-portal) that requests the approval and the [location based](https://docs.microsoft.com/azure/active-directory/authentication/how-to-mfa-additional-context) on the IP address where the sign-in originated from.
 
+The following screenshot shows the sign-in notification on the Microsoft Authenticator App with location and app name:
+
+<img src="./media/authentication/auth-app-location.png" width="300">
 

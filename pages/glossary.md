@@ -20,16 +20,17 @@
 - **EOP** - Exchange Online Protection. Read more:
   - [Microsoft Defender for Office 365 security overview](https://docs.microsoft.com/microsoft-365/security/office-365-security/overview)
 
-- **SOAR** - Security Orchestration, Automation, and Response. 
-  - Cloud solution: [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/overview)
-
 - **SIEM** - Security Information and Events Management (industry term). Learn more:
   - [Security information and event management (Wikipedia)](https://en.wikipedia.org/wiki/Security_information_and_event_management)
   - Cloud solution: [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/overview)
+
+- **SOAR** - Security Orchestration, Automation, and Response. 
+  - Cloud solution: [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/overview)
+
+- **SSPR** - [Self-Service Password Reset](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment). feature that enables users to reset their passwords without contacting IT staff for help. The users can quickly unblock themselves and continue working no matter where they are or time of day. 
 
 - **XDR** - eXtended Detection and Response solution that automatically collects, correlates, and analyzes signal, threat, and alert data from across your Microsoft 365 environment, including endpoint, email, applications, and identities. It leverages artificial intelligence (AI) and automation to automatically stop attacks, and remediate affected assets into a safe state. Learn more:
     
   - [Microsoft 365 Defender is a Microsoft XDR cyber security solution](https://docs.microsoft.com/microsoft-365/security/defender/eval-overview#microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution)
 
-- **WHFB** - Windows Hello For Business. In Windows 10 or 11, Windows Hello for Business replaces passwords with strong two-factor authentication on devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or PIN. Read more:
-  - [Windows Hello for Business Overview](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview)
+- **WHFB** - [Windows Hello For Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview). In Windows 10 or 11, Windows Hello for Business replaces passwords with strong two-factor authentication on devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or PIN. 
