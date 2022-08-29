@@ -29,7 +29,9 @@ Azure AD provides several customizable ways to deploy applications to end users 
 
 Users access the apps via the My Apps <https://myapps.microsoft.com/>. The My App is a [web-based portal](https://docs.microsoft.com/azure/active-directory/manage-apps/myapps-overview) that is used for managing and launching applications in Azure Azure AD. The user selects the app from the list of available apps (for that user). If the app doesn't support [auto provisioning](https://docs.microsoft.com/azure/active-directory//app-provisioning/user-provisioning), or auto provisioning was not configured, the first time the user selects the app, the user will have to sign-up with the Azure AD account. Consecutive sign-ins utilize the SSO and the user won't be promoted to sign-in again.
 
-![Screenshot of Azure AD my apps portal.](./media/my-apps-portal.png)
+Screenshot of Azure AD my apps portal:
+
+<img src="./media/manage-apps/my-apps-portal.png" width="600">
 
 #### 2.1.1 Collections
 
@@ -67,7 +69,9 @@ For more information, check out the [My Staff user guide](https://support.micros
 
 For organizations that have deployed Microsoft 365, applications assigned to users through Azure AD will also appear in the Office 365 portal at <https://portal.office.com/myapps>. The Microsoft 365 application launcher makes it easy and convenient for users in an organization to launch their apps without having to use a second portal, and is the recommended app launching solution for organizations using Microsoft 365.
 
-![Screenshot of Microsoft 365 application launcher.](./media/microsoft-365-app-launcher.png)
+Screenshot of Microsoft 365 application launcher:
+
+<img src="./media/manage-apps/microsoft-365-app-launcher.png" width="600">
 
 For more information about the Office 365 application launcher, see [Meet the Microsoft 365 app launcher](https://support.microsoft.com/office/meet-the-microsoft-365-app-launcher-79f12104-6fed-442f-96a0-eb089a3f476a).
 
@@ -79,7 +83,9 @@ These links are specifically crafted URLs that send a user through the Azure AD 
 
 These User access URLs can be found under the properties of available enterprise applications.
 
-![Screenshot of Azure AD enterprise app properties.](./media/user-access-url.png)
+Screenshot of Azure AD enterprise app properties:
+
+<img src="./media/manage-apps/user-access-url.png" width="600">
 
 ### 2.4 Service provider (app) initiated flow
 
@@ -100,7 +106,9 @@ For [OpenID Connect enterprise applications](https://docs.microsoft.com/azure/ac
 
 To add a SAML based enterprise application, find the app in the App Gallery, and follow the [guidance](https://docs.microsoft.com/azure/active-directory/saas-apps/tutorial-list) how to configure the enterprise application. The following screenshot shows the _Adobe Identity Management_ SAML app create page. 
 
-![Screenshot that shows a link to a SAML app integration guidance.](./media/saml-step-by-step.png)  
+Screenshot that shows a link to a SAML app integration guidance:
+
+<img src="./media/manage-apps/saml-step-by-step.png" width="600"> 
 
 Alternatively you can add any application that already exists in your organization, or any third-party application from a vendor who [is not already part of the Azure AD gallery](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#capabilities-for-apps-not-listed-in-the-azure-ad-gallery).
 
@@ -157,7 +165,9 @@ Admin configure an app to allow users to request access to the application. Then
 
 Once admin completes self-service application configuration, users can navigate to their My Apps portal and select **Request new apps** to find the apps that are enabled with self-service access. 
 
-![Screenshot demonstrates how to request a new app](./media/my-apps-portal-request-new-app.png)
+Screenshot demonstrates how to request a new app:
+
+<img src="./media/manage-apps/my-apps-portal-request-new-app.png" width="600"> 
 
 Business approvers also see a notification in their My Apps portal. You can enable an email notifying them when a user has requested access to an application that requires their approval 
 
@@ -181,7 +191,7 @@ For example, the Contoso organization allows their employees to access Outlook o
 
 ### 5.1 User consent settings
 
-Admin can confiure whether non-administrator users are allowed to grant user consent to an app and what [conditions](https://docs.microsoft.com/azure/active-directory/manage-apps/consent-and-permissions-overview#user-consent-settings) must be met before an application can be consented to by a user. For more information, check out [configure how users consent to applications](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-user-consent).
+Admin can configure whether non-administrator users are allowed to grant user consent to an app and what [conditions](https://docs.microsoft.com/azure/active-directory/manage-apps/consent-and-permissions-overview#user-consent-settings) must be met before an application can be consented to by a user. For more information, check out [configure how users consent to applications](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-user-consent).
 
 ### 5.2 Admin consent
 
@@ -218,16 +228,17 @@ Consent can be initiated in various ways. Users can be prompted for consent when
 
 The following screenshot shows a consent request by the zcal cloud app. 
 
-![Screenshot that shows a consent request by the zcal cloud app.](./media/user-consent.png)
+<img src="./media/manage-apps/user-consent.png" width="400"> 
 
 You can find the app permissions in Azure Portal, and concent for the users in your organization. After the admin consented, the user will not be prompted.
 
-![Screenshot that shows the zcal permission.](./media/app-permission.png)
+Screenshot that shows the zcal permission:
+
+<img src="./media/manage-apps/app-permission.png" width="600"> 
 
 Some apps might require an administrator to be the one who grants consent for the users. For example, application permissions can only be consented to by an administrator. In this case the user will not be prompted.
 
 ## 6. Automate provisioning
-
 
 The [application provisioning](https://docs.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) allows organization to automatically create or remove user identities and roles **in the applications** that users need to access. Common scenarios include provisioning an Azure AD user into SaaS applications like Dropbox, Salesforce, ServiceNow, and more.
 
