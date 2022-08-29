@@ -26,7 +26,21 @@ Access packages also include one or more policies. A policy defines the rules or
 
 #### 1.1.1 View, add, and remove assignments for an access package
 
-In Azure AD entitlement management, you can see [who has been assigned to access packages](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-access-package-assignments), their policy, and status. If an access package has an appropriate policy, you can also directly assign user to an access package.
+In Azure AD entitlement management, you can see [who has been assigned to access packages](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-access-package-assignments), their policy, and status. The following screenshots shows the _Marketing Campaign_ access package's assignments. Note, that Emily Smith has two assignments, one which expired.
+
+<img src="./media/governance/access-package-assignments.png" width="600"> 
+
+#### 1.1.2 Directly assign users
+
+In some cases, you might want to directly assign specific users to an access package so that users don't have to go through the process of requesting the access package. You can [directly assign users](https://docs.microsoft.comazure/active-directory/governance/entitlement-management-access-package-assignments#directly-assign-a-user) by selecting them manually.
+
+You can also create a **auto assignment policy** where users will automatically get access to this package based on specific filter criteria. For example, all users from the _Marketing_ _Sales_ departments will be automatically be assigned (without the user need to request access).
+
+<img src="./media/governance/access-package-auto-assignment-policy.png" width="600"> 
+
+The following example shows how to create the sales and marketing auto assignment policy filter:
+
+<img src="./media/governance/access-package-auto-assignment-policy-filter.png" width="600"> 
 
 ### 1.2 User experience
 
