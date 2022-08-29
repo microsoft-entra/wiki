@@ -83,6 +83,13 @@ PIM generates alerts when there's suspicious or unsafe activity in your organiza
 
 For more information, check out the following articles: [Configure security alerts for Azure AD roles](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts), and [Configure security alerts for Azure roles](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-configure-alerts).
 
+[PIM alerts you](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-configure-alerts#alerts) when:
+
+- Too many owners assigned to a resource
+- Too many permanent owners assigned to a resource
+- Duplicate role created
+- **Roles are being assigned outside of Privileged Identity Management** (high risk). For example, an admin assign an active-permanent permissions to a virtual machine. PIM alerts you to review the users in the list and remove them from privileged roles assigned outside of Privilege Identity Management.
+
 ## 9. Discovery and insights
 
 Before your organization starts using PIM, all role assignments are permanent. Users are always in their assigned roles even when they don't need their privileges. [Discovery and insights](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-security-wizard) shows you a list of privileged roles and how many users are currently in those roles. You can list out assignments for a role to learn more about the assigned users if one or more of them are unfamiliar.

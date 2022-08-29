@@ -17,7 +17,7 @@ Azure Active Directory also helps them access internal resources like apps on yo
 - [App provisioning](./pages/app-provisioning.md)
 - [Conditional access](./pages/conditional-access.md)
 - [Identity Governance](./pages/governance.md)
-- [Privilege identity management](./pages/pim.md)
+- [Privilege identity management (PIM)](./pages/pim.md)
 - [Reports and monitoring](./pages/reports-monitoring.md)
 - [Azure AD Connect cloud sync (Cloud sync)](./pages/cloud-sync.md)
 - [Azure AD Connect](./pages/hybrid.md)
