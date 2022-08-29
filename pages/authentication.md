@@ -238,3 +238,34 @@ The following screenshot shows the sign-in notification on the Microsoft Authent
 
 <img src="./media/authentication/auth-app-location.png" width="300">
 
+### 3.7 SMS-based authentication
+
+_Licensing_: P1 or P2
+
+[SMS-based authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-sms-signin) lets users sign-in without providing, or even knowing, their user name and password. After their account is created by an admin, they can enter their phone number at the sign-in prompt. They receive an authentication code via text message that they can provide to complete the sign-in. 
+
+This authentication method simplifies access to applications and services, especially for Frontline workers.
+
+#### 3.7.1 Admin experience 
+
+There are three main steps to enable and use SMS-based authentication in your organization:
+
+- [Enable the authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-sms-signin#enable-the-sms-based-authentication-method) method policy.
+- [Select users or groups](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-sms-signin#assign-the-authentication-method-to-users-and-groups) that can use the SMS-based authentication method.
+- [Assign a phone number for each user](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-sms-signin#set-a-phone-number-for-user-accounts) account. The phone number **must be unique** in your tenant. A user can have a single phone number registered.
+
+#### 3.7.2 User experience
+
+To test the user account that's now enabled for SMS-based sign-in, complete the following steps:
+
+1. Open a new InPrivate or Incognito web browser window to <https://myapps.microsoft.com>
+1. At the sign-in prompt, enter the phone number associated with the user in the previous section, then select **Next**.
+    
+    <img src="./media/authentication/sms-based-sign-in-1.png" width="300">
+
+1. A text message is sent to the phone number provided. To complete the sign-in process, enter the 6-digit code provided in the text message at the sign-in prompt. Then, select **Sign in**.
+    
+    <img src="./media/authentication/sms-based-sign-in-2.png" width="300">
+
+
+
