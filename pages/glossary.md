@@ -11,6 +11,9 @@
 - **CASB** - Cloud Access Security Broker. CASBs act a gatekeeper to broker access in real time between enterprise users and cloud resources they use, wherever the users are located and regardless of the device they are using. Read more:
   - [Microsoft Defender for Cloud Apps overview](https://docs.microsoft.com/defender-cloud-apps/what-is-defender-for-cloud-apps#what-is-a-casb)
 
+- **CBA** - Certificate Based Authentication. Enables administrators to allow or require users to authenticate with X.509 certificates against their Azure AD for applications and browser sign-in. Read more:
+  - [Overview of Azure AD certificate-based authentication (Preview)](https://docs.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication)
+
 - **EDR** - Endpoint Detection and Response. Learn more:
   - [Protect your endpoints with Defender for Cloud's integrated EDR solution](https://docs.microsoft.com/azure/defender-for-cloud/integration-defender-for-endpoint)
 

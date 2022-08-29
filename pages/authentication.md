@@ -26,7 +26,7 @@ The following are the [password expiration policies](https://docs.microsoft.com/
 - A global administrator or user administrator can use the [Microsoft Azure AD Module for Windows PowerShell](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0) to set user passwords not to expire.
 - By default, only passwords for user accounts that aren't synchronized through Azure AD Connect can be configured to not expire. For more information, [Connect AD with Azure AD.](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#password-expiration-policy). This impact all users that are sync via the Azure AD Connect.
 
-## 1.3 Banned password list
+### 1.3 Banned password list
 
 The Azure AD Identity Protection team constantly analyzes Azure AD security telemetry data looking for commonly used weak or compromised passwords. Weak terms are added to the [global banned password list](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad). When a password is changed or reset for any user in an Azure AD tenant, the current version of the global banned password list is used to validate the strength of the password.
 
@@ -34,7 +34,7 @@ The Azure AD Identity Protection team constantly analyzes Azure AD security tele
 - This global banned password list is applied to users when they change or reset their own password through Azure AD.
 - Admin can add their own entries to the [custom banned password list](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad#custom-banned-password-list)
 
-### 1.3.1 Password Protection for Active Directory (on premise)
+#### 1.3.1 Password Protection for Active Directory (on premise)
 
 [Azure AD Password Protection](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad-on-premises) detects and blocks known weak passwords and their variants, and can also block additional weak terms that are specific to your organization. On-premises deployment of Azure AD Password Protection uses the same global and custom banned password lists that are stored in Azure AD, and does the same checks for on-premises password changes as Azure AD does for cloud-based changes. These checks are performed during password changes and password reset events against on-premises Active Directory Domain Services (AD DS) domain controllers.
 
@@ -79,3 +79,48 @@ User enters the UPN of the account you created the TAP for, such as emily@contos
 If the user is included in the TAP policy, they'll see a screen to enter their TAP. The user needs to enter the TAP that was displayed in the Azure portal.
 
 ![](./media/authentication/temporary-access-pass-4.png)
+
+## 4. Certificate-based authentication
+
+[Certificate Based Authentication (CBA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication) enables administrators to allow or require users to authenticate with X.509 certificates against their Azure AD for applications and browser sign-in.
+
+Before this feature brought cloud-managed support for CBA to Azure AD, customers had to use AD FS to be able to authenticate using X.509 certificates against Azure AD. There are some [limitations](https://docs.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication-limitations) you should be aware of. 
+
+The CBA is type of passwordless authentication. On-premises passwords need not be stored in the cloud in any form.
+
+### 4.1 Admin experience
+
+There are some configuration steps to complete before enabling Azure AD CBA. For more information, check out the [How to configure Azure AD certificate-based authentication](https://docs.microsoft.com/azure/active-directory/authentication/how-to-certificate-based-authentication) article.
+
+To configure the certification authorities you can use [Azure Portal](https://docs.microsoft.com/azure/active-directory/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-azure-portal), or [PowerShell](https://docs.microsoft.com/azure/active-directory/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-powershell)
+
+### 4.2 User experience
+
+During sign-in, users enter their username into the Azure AD sign-in page, and then select **Next**. Then the users will see an option to authenticate with a certificate instead of entering a password. If multiple matching certificates are present on the device, the user can pick which one to use. The certificate is validated, the binding to the user account is checked, and if successful, they are signed in.
+
+The following screen shows the first sign-in page where the user enters their UPN:
+
+![](./media/authentication/certificate-based-authentication-1.png)
+
+The following screen shows the second sign-in page where a user can select to **Sign in with a certificate**:
+
+![](./media/authentication/certificate-based-authentication-2.png)
+
+Note, if admin has enabled other authentication methods like Phone sign-in or FIDO2, users may see a different sign-in screen.
+
+#### 4.2.1 Windows SmartCard logon
+
+Azure AD users can authenticate using X.509 certificates on their [SmartCards directly against Azure AD at Windows logon](https://docs.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication-smartcard). There is no special configuration needed on the Windows client to accept the SmartCard authentication. A join machine or a hybrid environment (hybrid join) is required.
+
+The user presents a physical or virtual SmartCard to the test machine. Then, select **SmartCard** icon, enter the PIN and authenticate the user.
+
+![](./media/authentication/certificate-based-authentication-windows.png)
+
+#### 4.2.2 Mobile devices
+
+[Android and iOS devices](https://docs.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication-mobile) can use certificate-based authentication (CBA) to authenticate to Azure AD using a client certificate on their device when connecting to:
+
+- Office mobile applications such as Microsoft Outlook and Microsoft Word
+- Exchange ActiveSync (EAS) clients
+
+Azure AD certificate-based authentication (CBA) is supported for certificates on-device on native browsers as well as on Microsoft first-party applications on both iOS and Android devices.
