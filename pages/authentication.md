@@ -101,11 +101,12 @@ During sign-in, users enter their username into the Azure AD sign-in page, and t
 
 The following screen shows the first sign-in page where the user enters their UPN:
 
-![](./media/authentication/certificate-based-authentication-1.png)
+<img src="./media/authentication/certificate-based-authentication-1.png" width="400">
+
 
 The following screen shows the second sign-in page where a user can select to **Sign in with a certificate**:
 
-![](./media/authentication/certificate-based-authentication-2.png)
+<img src="./media/authentication/certificate-based-authentication-2.png" width="400">
 
 Note, if admin has enabled other authentication methods like Phone sign-in or FIDO2, users may see a different sign-in screen.
 
@@ -115,7 +116,7 @@ Azure AD users can authenticate using X.509 certificates on their [SmartCards di
 
 The user presents a physical or virtual SmartCard to the test machine. Then, select **SmartCard** icon, enter the PIN and authenticate the user.
 
-![](./media/authentication/certificate-based-authentication-windows.png)
+<img src="./media/authentication/certificate-based-authentication-windows.png" width="400">
 
 ##### 3.2.1.2 Mobile devices
 
@@ -144,11 +145,11 @@ After admin enables a policy, they can [create a TAP](https://docs.microsoft.com
 
 The following screenshot shows how to create a TAP:
 
-![](./media/authentication/temporary-access-pass-1.png)
+<img src="./media/authentication/temporary-access-pass-1.png" width="600">
 
 Once added, the details of the TAP are shown. Make a note of the actual TAP value. You provide this value to the user. You can't view this value after you select Ok. The following screenshot shows a TAP create by administrator:
 
-![](./media/authentication/temporary-access-pass-2.png)
+<img src="./media/authentication/temporary-access-pass-2.png" width="600">
 
 #### 3.3.2 User experience
 
@@ -158,11 +159,11 @@ Note, you can also test the TAP by navigating to the <https://myapps.microsoft.c
 
 User enters the UPN of the account you created the TAP for, such as emily@contoso.com.
 
-![](./media/authentication/temporary-access-pass-3.png)
+<img src="./media/authentication/temporary-access-pass-3.png" width="400">
 
 If the user is included in the TAP policy, they'll see a screen to enter their TAP. The user needs to enter the TAP that was displayed in the Azure portal.
 
-![](./media/authentication/temporary-access-pass-4.png)
+<img src="./media/authentication/temporary-access-pass-4.png" width="400">
 
 ### 3.4 Time-based One Time Password
 
@@ -191,27 +192,27 @@ The admin configure the Security questions in Azure Portal => **Azure Active Dir
 
 To use security questions authentication, users can register at the security info registration <https://aka.ms/setupsecurityinfo>. The following screenshot shows how a user can add a security  authentication method.
 
-![](./media/authentication/security-questions-1.png)
+<img src="./media/authentication/security-questions-1.png" width="400">
 
 Then select the **security questions** authentication option.
 
-![](./media/authentication/security-questions-2.png)
+<img src="./media/authentication/security-questions-2.png" width="400">
 
 The user is asked to pick from a set of questions to prompt for and provide their own answers.
 
-![](./media/authentication/security-questions-3.png)
+<img src="./media/authentication/security-questions-3.png" width="400">
 
 During the sign-in, if a user selects **Can't access your account?**, or navigate to <https://aka.ms/sspr>. Then provide their UPN.
 
-![](./media/authentication/security-questions-4.png)
+<img src="./media/authentication/security-questions-4.png" width="500">
 
 After providing the UPN, the users is asked random questions from the pool of the security questions:
 
-![](./media/authentication/security-questions-4.png)
 
-fffff
+<img src="./media/authentication/security-questions-5.png" width="400">
 
 
-<img src="./media/authentication/security-questions-4.png" width="100">
+
+
 
 
