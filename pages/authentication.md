@@ -124,3 +124,15 @@ The user presents a physical or virtual SmartCard to the test machine. Then, sel
 - Exchange ActiveSync (EAS) clients
 
 Azure AD certificate-based authentication (CBA) is supported for certificates on-device on native browsers as well as on Microsoft first-party applications on both iOS and Android devices.
+
+## 5. Sign-in with email
+
+You can configure Azure AD to let users [sign in with their email](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin) as an alternate login ID. For example, if Contoso rebranded to Fabrikam, rather than continuing to sign in with the legacy _ana@contoso.com_ UPN, email as an alternate login ID can be used. To access an application or service, users would sign in to Azure AD using their non-UPN email, such as _ana@fabrikam.com_.
+
+The feature supports managed authentication with Password Hash Sync (PHS) or Pass-Through Authentication (PTA). The  'proxyAddresses' attribute is read-only and cannot be set using PowerShell.
+
+The feature enables sign-in with ProxyAddresses, in addition to UPN, for cloud-authenticated Azure AD users. 
+
+![](./media/authentication/email-signin.png)
+
+This feature also supports [B2B guest user sign-in](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin#b2b-guest-user-sign-in-with-an-email-address) (cross tenant access) with an email address.
