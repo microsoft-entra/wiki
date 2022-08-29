@@ -20,6 +20,8 @@
 - **EOP** - Exchange Online Protection. Read more:
   - [Microsoft Defender for Office 365 security overview](https://docs.microsoft.com/microsoft-365/security/office-365-security/overview)
 
+- **LAPS** - [Local Administrator Password Solution](https://support.microsoft.com/topic/microsoft-security-advisory-local-administrator-password-solution-laps-now-available-may-1-2015-404369c3-ea1e-80ff-1e14-5caafb832f53). Check also, [Prerequisites for Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-prerequisites)
+
 - **SIEM** - Security Information and Events Management (industry term). Learn more:
   - [Security information and event management (Wikipedia)](https://en.wikipedia.org/wiki/Security_information_and_event_management)
   - Cloud solution: [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/overview)
