@@ -30,3 +30,6 @@
 - **XDR** - eXtended Detection and Response solution that automatically collects, correlates, and analyzes signal, threat, and alert data from across your Microsoft 365 environment, including endpoint, email, applications, and identities. It leverages artificial intelligence (AI) and automation to automatically stop attacks, and remediate affected assets into a safe state. Learn more:
     
   - [Microsoft 365 Defender is a Microsoft XDR cyber security solution](https://docs.microsoft.com/microsoft-365/security/defender/eval-overview#microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution)
+
+- **WHFB** - Windows Hello For Business. In Windows 10 or 11, Windows Hello for Business replaces passwords with strong two-factor authentication on devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or PIN. Read more:
+  - [Windows Hello for Business Overview](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview)
