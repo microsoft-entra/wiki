@@ -39,6 +39,30 @@ By default, all the applications a user can access are listed together on a sing
 
 The screenshot above shows two collections **Apps** (default), and **Contoso apps**. 
 
+### 2.1.3 Enable preview features for My Apps
+
+An organizations can enable, or disable public preview features in My Apps. To change the settings:. 
+
+1. Sign in to the [Azure portal](https://portal.azure.com) or [Azure AD admin center](https://aad.portal.azure.com) as a Global Administrator, User Administrator, or Group Administrator.
+1. Select **Azure Active Directory** > **User settings** > **User feature** > **Manage user feature settings**.
+1. Select **Users can use preview features for My Apps**.
+
+### 2.1.3 My Staff portal
+
+[My Staff](https://docs.microsoft.com/azure/active-directory/roles/my-staff-configure) enables you to delegate permissions to a figure of authority, such as a store manager or a team lead, to ensure that their staff members are able to access their Azure AD accounts. Instead of relying on a central helpdesk, organizations can delegate common tasks such as resetting passwords or changing phone numbers to a local team manager.
+
+Users who are enabled and have been assigned an administrative role can access it through <https://mystaff.microsoft.com>. They can select an administrative unit to view the users in that unit, and select a user to open their profile. Then they can:
+
+- [Reset a user's password](https://docs.microsoft.com/azure/active-directory/roles/my-staff-configure#reset-a-users-password)
+- [Manage a phone number](https://docs.microsoft.com/azure/active-directory/roles/my-staff-configure#manage-a-phone-number)
+- [Can view audit logs for actions taken in My Staff in the Azure portal](https://docs.microsoft.com/azure/active-directory/roles/my-staff-configure#audit-logs)
+
+The following screenshot shows how admin can manage its staff:
+
+<img src="./media/manage-apps/my-staff-portal-administrative-unit-users.png" width="600">
+
+For more information, check out the [My Staff user guide](https://support.microsoft.com/account-billing/manage-front-line-users-with-my-staff-c65b9673-7e1c-4ad6-812b-1a31ce4460bd)
+
 ### 2.2 Microsoft 365 application launcher
 
 For organizations that have deployed Microsoft 365, applications assigned to users through Azure AD will also appear in the Office 365 portal at <https://portal.office.com/myapps>. The Microsoft 365 application launcher makes it easy and convenient for users in an organization to launch their apps without having to use a second portal, and is the recommended app launching solution for organizations using Microsoft 365.
