@@ -17,6 +17,8 @@
 - **EDR** - Endpoint Detection and Response. Learn more:
   - [Protect your endpoints with Defender for Cloud's integrated EDR solution](https://docs.microsoft.com/azure/defender-for-cloud/integration-defender-for-endpoint)
 
+- **ELM** [Entitlement management](./governance.md)
+
 - **EOP** - Exchange Online Protection. Read more:
   - [Microsoft Defender for Office 365 security overview](https://docs.microsoft.com/microsoft-365/security/office-365-security/overview)
 

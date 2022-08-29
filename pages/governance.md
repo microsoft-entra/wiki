@@ -2,7 +2,7 @@
 
 Identity Governance provides you with capabilities to ensure that the right people have the right access to the right resources. It allows you to mitigate access risk by protecting, monitoring, and auditing access to critical assets while ensuring employee and business partner productivity.
 
-## 1. Entitlement management
+## 1. Entitlement management (ELM)
 
 _Licensing_: P2
 
