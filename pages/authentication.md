@@ -204,7 +204,7 @@ The user is asked to pick from a set of questions to prompt for and provide thei
 
 During the sign-in, if a user selects **Can't access your account?**, or navigate to <https://aka.ms/sspr>. Then provide their UPN.
 
-<img src="./media/authentication/security-questions-4.png" width="500">
+<img src="./media/authentication/security-questions-4.png" width="400">
 
 After providing the UPN, the users is asked random questions from the pool of the security questions:
 
