@@ -62,6 +62,14 @@ The catalog allows you:
 - [Delegate to an access package manager](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-delegate-managers)
 - [Trigger custom Logic Apps](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-logic-apps-integration)
 
+### 1.4 Custom Extensions
+
+[Custom Extensions](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-logic-apps-integration) allows you to use Azure Logic Apps to automate custom workflows and connect apps and services in one place. These Logic Apps can then be triggered to run in accordance with entitlement management use cases such as when an access package is granted or requested. For example, an admin could create and link a custom Logic App to entitlement management so that when a user requests an access package, a Logic App is triggered that ensures the user is also assigned certain characteristics in a 3rd party SAAS app (like Salesforce) or is sent a custom email.
+
+The following screenshot demonstrates how to integrate Logic Apps into the policy lifecycle:
+
+<img src="./media/governance/access-package-custom-extensions.png" width="600"> 
+
 ## 2. Access reviews
 
 _Licensing_: P2
