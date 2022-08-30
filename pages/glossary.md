@@ -22,12 +22,17 @@
 - **ELM** [Entitlement management](./governance.md)
 
 - **EOP** - Exchange Online Protection. Read more:
-  - [Microsoft Defender for Office 365 security overview](https://docs.microsoft.com/microsoft-365/security/office-365-security/overview)
+  - [Microsoft Defender for Office 365 security overview](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment)
 
 - **FIDO** (FIDO2)  - Fast IDentity Online (Alliance). It helps to promote open authentication standards and reduce the use of passwords as a form of authentication. FIDO2 is the latest standard that incorporates the web authentication (WebAuthn) standard. Read more:
   - [FIDO2 security keys](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys)
 
 - **LAPS** - [Local Administrator Password Solution](https://support.microsoft.com/topic/microsoft-security-advisory-local-administrator-password-solution-laps-now-available-may-1-2015-404369c3-ea1e-80ff-1e14-5caafb832f53). Check also, [Prerequisites for Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-prerequisites)
+
+- **MAM** - [Mobile Application Management](https://docs.microsoft.com/mem/intune/apps/app-management). As an IT admin, you can use Microsoft Intune to manage the client apps that your company's workforce uses. This functionality is in addition to managing devices and protecting data. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. Check also _MDM_ for device management.
+
+- **MDM** - [Mobile Device Management](https://docs.microsoft.com/windows/client-management/mdm/mdm-overview). Can enforce compliance with organization policies, add or remove apps, report device’s compliance. Microsoft Intune supports Android, macOS, iOS, and Windows devices. Check also _MAM_ for device application management. Read more:
+  - [Azure Active Directory integration with MDM](https://docs.microsoft.com/windows/client-management/mdm/azure-active-directory-integration-with-mdm) 
 
 - **SIEM** - Security Information and Events Management (industry term). Learn more:
   - [Security information and event management (Wikipedia)](https://en.wikipedia.org/wiki/Security_information_and_event_management)
