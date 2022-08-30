@@ -1,5 +1,7 @@
 # Glossary
 
+For Office 365, check out the [Microsoft 365 Glossary](https://docs.microsoft.com/microsoft-365/community/glossary).
+
 - **AAC** - Adaptive Access ontrol
 - **AD DS** (ADDS, AD-DS) - Active Directory Domain Services. On-premises directory services. It manges information about user accounts (such as names, passwords, phone numbers), information about objects on the network, rules, group policies, Kerberos/NTLM authentication and more.  Learn more:
   - On-Prem: [Active Directory Domain Services Overview](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)
@@ -48,3 +50,5 @@
   - [Microsoft 365 Defender is a Microsoft XDR cyber security solution](https://docs.microsoft.com/microsoft-365/security/defender/eval-overview#microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution)
 
 - **WHFB** - [Windows Hello For Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview). In Windows 10 or 11, Windows Hello for Business replaces passwords with strong two-factor authentication on devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or PIN. 
+
+

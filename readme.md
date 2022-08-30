@@ -2,7 +2,7 @@
 
 ## Acronyms, Abbreviations and terms
 
-This [Glossary](./pages/glossary.md) demystifies some of the terms and acronyms we use every day in working with the Azure platform. For Office 365, check out the [Microsoft 365 Glossary](https://docs.microsoft.com/microsoft-365/community/glossary).
+This [Glossary](./pages/glossary.md) demystifies some of the terms and acronyms we use every day in working with the Azure platform. 
 
 ## Azure Active Directory
 
