@@ -24,6 +24,9 @@
 - **EOP** - Exchange Online Protection. Read more:
   - [Microsoft Defender for Office 365 security overview](https://docs.microsoft.com/microsoft-365/security/office-365-security/overview)
 
+- **FIDO** (FIDO2)  - Fast IDentity Online (Alliance). It helps to promote open authentication standards and reduce the use of passwords as a form of authentication. FIDO2 is the latest standard that incorporates the web authentication (WebAuthn) standard. Read more:
+  - [FIDO2 security keys](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys)
+
 - **LAPS** - [Local Administrator Password Solution](https://support.microsoft.com/topic/microsoft-security-advisory-local-administrator-password-solution-laps-now-available-may-1-2015-404369c3-ea1e-80ff-1e14-5caafb832f53). Check also, [Prerequisites for Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-prerequisites)
 
 - **SIEM** - Security Information and Events Management (industry term). Learn more:

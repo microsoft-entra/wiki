@@ -268,4 +268,73 @@ To test the user account that's now enabled for SMS-based sign-in, complete the 
     <img src="./media/authentication/sms-based-sign-in-2.png" width="300">
 
 
+### 3.8 Security key authentication (FIDO2)
 
+[FIDO](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys) allows users and organizations to leverage the standard to sign in to their resources without a username or password using an external security key or a platform key built into a device. These FIDO2 **passkeys** (security keys) are typically USB devices, but could also use Bluetooth or NFC. With a hardware device that handles the authentication, the security of an account is increased as there's no password that could be exposed or guessed.
+
+FIDO2 passkeys can be used to sign in to their Azure AD joined devices, or hybrid Azure AD joined Windows 10 devices and get single-sign on to their cloud and on-premises resources. macOS and Linux currently support only USB external devices. For more information, check out the [browser support of FIDO2 passwordless authentication](https://docs.microsoft.com/azure/active-directory/authentication/fido2-compatibility) article.
+
+#### 3.8.1 Multi-device FIDO Credentials (passkeys)
+
+If you are using Microsoft, Apple, or a Google device, your passkeys (security keys) can securely sync to your other devices of the same platform. So if you get a new device, just authenticate with your platform provider and all your credentials will automatically be ready to use.
+
+For more information, check out the [Multi-Device FIDO Credentials](https://fidoalliance.org/white-paper-multi-device-fido-credentials/) White Paper. Some of the platforms are in Beta version and can't be used.
+
+#### 3.8.2 Admin experience
+
+Admins [enable FIDO passwordless security key sign-in](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-passwordless-security-key) on their Azure AD tenant. No need to install anything on any device or manage certificates. There are [some optional settings](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-passwordless-security-key#fido-security-key-optional-settings) for managing security keys per tenant. 
+
+#### 3.8.3 User experience
+
+Users can [register](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-passwordless-security-key#user-registration-and-management-of-fido2-security-keys) and then select a FIDO2 security key at the sign-in interface as their main means of authentication. The [Enable passwordless security key sign-in](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-passwordless-security-key) tutorial shows how to sign-in using Windows 10 machine. The following example uses MacOs with an external FIDO2 USB device.
+
+##### 3.8.3.1 FIDO enrollment user flow
+
+To enroll a new FIDO security key sing-in, the user needs to follow there steps:
+
+1. Browse to <https://myprofile.microsoft.com> and sign in (if not already) with their credentials, such as username and password, or phone sign-in.
+1. From the menu, select **Security Info**. If prompted to Azure AD Multi-Factor Authentication, complete the MFA sign-in.
+1. Select **+ Add sign-in method**.
+    
+    <img src="./media/authentication/fido-mac-add-sign-in-method.png" width="400">
+
+1. From the avalible sign-in methods, select **Security Key**.
+    
+    <img src="./media/authentication/fido-mac-add-fido-1.png" width="400">   
+
+1. Choose **USB device** or **NFC device**. In this example, we select USB device.
+
+    <img src="./media/authentication/fido-mac-add-fido-2.png" width="400"> 
+
+1. Have your key ready and choose **Next**.
+
+    <img src="./media/authentication/fido-mac-add-fido-3.png" width="400"> 
+
+1. A box will appear and ask the user to create/enter a **PIN** for your security key, then perform the required gesture for the key, either biometric or touch.
+
+    <img src="./media/authentication/fido-mac-add-fido-4.png" width="400"> 
+
+1. The user will be returned to the registration experience and asked to provide a meaningful name for the key so the user can identify which one if they have multiple. Select **Next**.
+
+    <img src="./media/authentication/fido-mac-add-fido-5.png" width="400"> 
+
+1. Select **Done** to complete the process.
+
+##### 3.8.3.2 Sign-in with security key user flow
+
+After a user has already provisioned their FIDO2 security key. They can choose to sign in on the web with their FIDO2 security key inside of a supported browser. The user goes through following steps:
+
+1. Browse to <https://myapps.microsoft.com>, or other cloud app.
+1. On the sign-in page, select  **Sing-in options**.
+
+    <img src="./media/authentication/fido-mac-sign-in-1.png" width="400"> 
+
+1. Select **Sign in with Windows Hello or a security key**.
+
+    <img src="./media/authentication/fido-mac-sign-in-2.png" width="400"> 
+
+1. Select **Allow** to _login.microsoft.com_ request.
+
+    <img src="./media/authentication/fido-mac-sign-in-3.png" width="400"> 
+
+1. This finalizes the sign-in flow. Now, you will be redirected back to the <https://myapps.microsoft.com>, or your cloud app.
