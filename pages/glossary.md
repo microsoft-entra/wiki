@@ -49,6 +49,8 @@ For Office 365, check out the [Microsoft 365 Glossary](https://docs.microsoft.co
     
   - [Microsoft 365 Defender is a Microsoft XDR cyber security solution](https://docs.microsoft.com/microsoft-365/security/defender/eval-overview#microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution)
 
+- **XTAP** [Cross Tenant Access Policy](https://docs.microsoft.com/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-collaboration).
+
 - **WHFB** - [Windows Hello For Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview). In Windows 10 or 11, Windows Hello for Business replaces passwords with strong two-factor authentication on devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or PIN. 
 
 
