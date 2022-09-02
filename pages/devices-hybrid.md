@@ -78,6 +78,8 @@ Configure hybrid Azure AD join by using Azure AD Connect for a managed domain:
     ```powershell
     Import-Module ADSync
     Start-ADSyncSyncCycle -PolicyType Delta
+
+    #Or: Start-ADSyncSyncCycle -PolicyType Initial
     ```
 
 ## Confirm the devices are hybrid joined
