@@ -59,7 +59,7 @@ The following screenshot shows the device object of Emily's Windows 11:
 
 <img src="./media/devices/device-registration-windows-11-device-object.png" width="600"> 
 
-TIP: you can run the `dsredcmd /status` command on your windows machine to get more information about the registered device.
+TIP: you can run the `dsregcmd /status` command on your windows machine to get more information about the registered device.
 
 ## 2. Azure AD join
 
@@ -119,7 +119,7 @@ The following screenshot shows the device object of Emily's Windows 11:
 
 <img src="./media/devices/device-join-windows-device-object.png" width="600"> 
 
-TIP: you can run the `dsredcmd /status` command on your windows machine to get more information about the registered device.
+TIP: you can run the `dsregcmd /status` command on your windows machine to get more information about the registered device.
 
 ## 3. Hybrid Azure AD join
 
