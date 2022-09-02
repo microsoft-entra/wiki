@@ -39,7 +39,7 @@ During the device registration, a "device object" is created Azure AD. Then a ce
 
 Device are registered by users [installing the Company portal app](https://docs.microsoft.com//mem/intune/user-help/sign-in-to-the-company-portal).  
 
-### 1.1.1 Windows 10 registration without Intune
+### 1.1.1 Windows 11 registration (without Intune)
 
 For Windows 10 and later, to register a personal device on your work or school network, follow the [user guide](https://support.microsoft.com/account-billing/register-your-personal-device-on-your-work-or-school-network-8803dd61-a613-45e3-ae6c-bd1ab25bf8a8). 
 
@@ -73,7 +73,7 @@ Azure AD join enables you to transition towards a cloud-first model with Windows
 - Azure AD joined devices are signed in to using an organizational Azure AD account.
 - Supports Windows 10 and Windows 11 devices. Isn't supported on previous versions of Windows or other operating systems. If you have Windows 7/8.1 devices, you must upgrade at least to Windows 10 to deploy Azure AD join.
 
-### 2.1 Windows 10 registration without Intune
+### 2.1 Windows 11 registration (without Intune)
 
 The following screenshot shows how a user joins a Windows 11 device.
 
@@ -99,6 +99,22 @@ After the device join process is completed, log-out and log-in again with the Az
 
 <img src="./media/devices/device-join-windows-11-step-6.png" width="400"> 
 
+The following screenshot shows how to login into a joined Windows device with an Azure AD account. The account can be a sync account from an on-premises Active Directory, or cloud only account.
+
+<img src="./media/devices/device-join-windows-11-step-6a.png" width="400"> 
+
+The device is connected to the Azure AD **Contoso** tenant, and it's not joined to an on-premises Active Directory. This's purely cloud connected device, although the sign-in account can be an account that is sync to the cloud. 
+
+<img src="./media/devices/device-join-windows-11-step-7.png" width="600"> 
+
+Emily is now an administrator of that device. She can add other users from the @kingdir.biz organization.
+
+<img src="./media/devices/device-join-windows-11-step-8.png" width="600"> 
+
+In the previous screen she selects **Add account**, and provide the account UPN, the selects **Add**. 
+
+<img src="./media/devices/device-join-windows-11-step-9.png" width="400"> 
+
 The following screenshot shows the device object of Emily's Windows 11:
 
 <img src="./media/devices/device-join-windows-device-object.png" width="600"> 
@@ -112,8 +128,10 @@ If you have an on-premises Active Directory environment and you want to join you
 - Azure AD Connect, or Azure AD could sync is required and the computers must be in the scope of the sync.
 - [SSO](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso) must be set (see also <https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso>) 
 
+
 ### 3.1 Windows current devices
 
+Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid.md) tutorial to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync.
 
 ### 3.2 Windows down-level devices
 
