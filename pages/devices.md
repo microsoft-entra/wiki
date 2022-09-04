@@ -123,15 +123,29 @@ TIP: you can run the `dsregcmd /status` command on your windows machine to get m
 
 ## 3. Hybrid Azure AD join
 
-If you have an on-premises Active Directory environment and you want to join your **AD domain-joined** computers to **Azure AD**, you can accomplish this task by doing [hybrid Azure AD join](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Learn more: [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)
+An [Hybrid Azure AD join](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) machines are on-prem Active Directory joined machines that are also registered in the Azure AD.
+
+<img src="./media/devices/hybrid-diagram.png" width="400"> 
+
+If you have an on-premises Active Directory environment and you want to join your **AD domain-joined** computers to **Azure AD**, you can accomplish this task by doing hybrid Azure AD join. Learn more: [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)
+
+With device hybrid joined, users sign-in to their devices with their (on-prem) account as they used to. After a user  logs-in to a device, they able to access cloud apps using Azure AD single sign-in. For example, when users try to access <https://myapps.microsft.com>, they will not be prompted to sign-in. 
+
+Hybrid Azure AD join requires:
 
 - Azure AD Connect, or Azure AD could sync is required and the computers must be in the scope of the sync.
-- [SSO](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso) must be set (see also <https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso>) 
+- For Windows 10 or 11, the [Primary Refresh Token](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token) provides the best SSO experience (you don't need to configure). For Windows down-level devices, configure [Seamless Single Sign-On](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).
+- The SSO works only for accounts that are sync to the cloud. Could only accounts, or on-premisses accounts that are out of sync will not be able to sign-in to the machine, or use the SSO.
 
 
 ### 3.1 Windows current devices
 
-Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid.md) tutorial to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync.
+Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid.md) tutorial to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync. For more information, watch [Hybrid Azure AD Join Devices](https://www.youtube.com/watch?v=2uwSSIxoEnU) YouTube video by _ConceptsWork_.
+
+With windows current devices:
+
+- The device will join the Azure AD if the device joined to the Active Directory, and in the scope of the Azure AD Connect, or [Azure AD Connect cloud sync (recommenced)](https://docs.microsoft.com/azure/active-directory/cloud-sync/what-is-cloud-sync). No need to install anything on the device.
+- The registration is completed when the user log-in to the devices (using the **Automatic-Device-Join** windows task scheduler).
 
 ### 3.2 Windows down-level devices
 
