@@ -157,7 +157,5 @@ With Windows down-level devices:
 - The same physical device **appears multiple times** in Azure AD when multiple domain users sign-in the downlevel hybrid Azure AD joined devices.
 - Make sure KB4284842 is installed, in case of Windows 7 SP1 or Windows Server 2008 R2 SP1
 
-Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid-win-7.md) tutorial (in this Wiki) to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync.
-
 Follow the steps in [Configure Windows down-level hybrid Azure AD join](./devices-hybrid-win-7.md) tutorial (in this Wiki) to add a Windows 7 device and configure the Azure AD Connect's device sync.
 
