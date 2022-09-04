@@ -140,7 +140,7 @@ Hybrid Azure AD join requires:
 
 ### 3.1 Windows current devices
 
-Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid.md) tutorial to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync. For more information, watch [Hybrid Azure AD Join Devices](https://www.youtube.com/watch?v=2uwSSIxoEnU) YouTube video by _ConceptsWork_.
+Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid-win-11.md) tutorial (in this Wiki) to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync. For more information, watch [Hybrid Azure AD Join Devices](https://www.youtube.com/watch?v=2uwSSIxoEnU) YouTube video by _ConceptsWork_.
 
 With windows current devices:
 
@@ -150,4 +150,14 @@ With windows current devices:
 ### 3.2 Windows down-level devices
 
 To register Windows down-level devices, organizations must install [Microsoft Workplace Join for non-Windows 10 computers](https://www.microsoft.com/download/details.aspx?id=53554) available on the Microsoft Download Center. The installer creates a scheduled task on the system that runs in the user context. The task is triggered when the user signs in to Windows. The task silently joins the device with Azure AD with the user credentials after authenticating with Azure AD.
+
+With Windows down-level devices:
+
+- Hybrid Azure AD join for downlevel Windows devices works slightly differently than it does in Windows 10 or newer. You need AD FS (for federated domains) or [Seamless SSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) configured (for managed domains).
+- The same physical device **appears multiple times** in Azure AD when multiple domain users sign-in the downlevel hybrid Azure AD joined devices.
+- Make sure KB4284842 is installed, in case of Windows 7 SP1 or Windows Server 2008 R2 SP1
+
+Follow the steps in [Configure hybrid Azure AD join](./devices-hybrid-win-7.md) tutorial (in this Wiki) to add a Windows 11 or 10 device and configure the Azure AD Connect's device sync.
+
+Follow the steps in [Configure Windows down-level hybrid Azure AD join](./devices-hybrid-win-7.md) tutorial (in this Wiki) to add a Windows 7 device and configure the Azure AD Connect's device sync.
 
