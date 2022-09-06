@@ -2,7 +2,8 @@
 
 For Office 365, check out the [Microsoft 365 Glossary](https://docs.microsoft.com/microsoft-365/community/glossary).
 
-- **AAC** - Adaptive Access ontrol
+- **AAC** - Adaptive Access control
+
 - **AD DS** (ADDS, AD-DS) - Active Directory Domain Services. On-premises directory services. It manges information about user accounts (such as names, passwords, phone numbers), information about objects on the network, rules, group policies, Kerberos/NTLM authentication and more.  Learn more:
   - On-Prem: [Active Directory Domain Services Overview](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)
   - Clouds solution: [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services/overview)
@@ -35,6 +36,10 @@ For Office 365, check out the [Microsoft 365 Glossary](https://docs.microsoft.co
 
 - **MDM** - [Mobile Device Management](https://docs.microsoft.com/windows/client-management/mdm/mdm-overview). Can enforce compliance with organization policies, add or remove apps, report device’s compliance. Microsoft Intune supports Android, macOS, iOS, and Windows devices. Check also _MAM_ for device application management. Read more:
   - [Azure Active Directory integration with MDM](https://docs.microsoft.com/windows/client-management/mdm/azure-active-directory-integration-with-mdm) 
+
+- **PHS** - [Password Hash Synchronization](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-phs). Azure AD Connect synchronizes a hash, of the hash, of a user's password from an on-premises Active Directory instance to a cloud-based Azure AD instance. Allowing users to sign in to both on-premises and cloud-based applications using the same passwords, while validates users' passwords against the  Azure AD. Check also _PTA_.
+
+- **PTA** - [Pass Through Authentication](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta). Allowing users to sign in to both on-premises and cloud-based applications using the same passwords, while validates users' passwords directly against the on-premises Active Directory. Check also _PHS_.
 
 - **SIEM** - Security Information and Events Management (industry term). Learn more:
   - [Security information and event management (Wikipedia)](https://en.wikipedia.org/wiki/Security_information_and_event_management)
